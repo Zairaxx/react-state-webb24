@@ -1,11 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
 
   let [students, setStudents] = useState([])
+
   let [name, setName] = useState("")
   let [age, setAge] = useState("")
   let [programme, setProgramme] = useState("");
@@ -13,7 +12,6 @@ function App() {
 
   //Funktion för att lägga till elev i state
   let addStudent = () => {
-    
     //Nytt objekt med värden vi sparat i state
     let newStudent = {
       name: name,
@@ -32,11 +30,11 @@ function App() {
   return(
     <>
       <h1>React med inputs</h1>
-      
+      {/* Inputs - Varje input kopplat till ett eget state som uppdateras när vi fyller i fältet */}
       <input type="text" placeholder='Namn' onChange={(event) => setName(event.target.value)} />
       <input type="text" placeholder='Ålder' onChange={(event) => setAge(event.target.value)} />
 
-        <select onChange={(event => setProgramme(event.target.value))}>
+      <select onChange={(event => setProgramme(event.target.value))}>
         <option>Frontend</option>
         <option>Backend</option>
         <option>UX-design</option>
