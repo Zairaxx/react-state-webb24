@@ -64,9 +64,8 @@ function App() {
     setPersoner(newArray);
   }
 
-
   return (
-  <div className={!darkMode && "light"}>
+  <div className={!darkMode ? "light" : ""}>
     <h1>Övningsuppgift - Profiler</h1>
     {/* Darkmode & Light mode  */}
     <button onClick={() => {setDarkMode(!darkMode)}}>{darkMode ? "Light mode" : "Dark mode"}</button>
