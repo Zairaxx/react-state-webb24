@@ -8,7 +8,7 @@ const Profile = (props) => {
         setShowMore(!showMore)
     }
 
-    return <div style={{border:"2px solid white"}}>
+    return <div className={props.darkMode ? "light-border" : "dark-border"} >
         <h2>Förnamn: {props.data.namn}</h2>
         <button onClick={toggleShow}>{showMore ? "Show less" : "Show more"}</button>
 
