@@ -10,7 +10,7 @@ function App() {
     <h1>React state - Webb24</h1>
     <button onClick={() => setShowSlogan(!showSlogan)}>Toggle slogan</button>
 
-    {/* W ? T : F */}
+    {/* W(hat) ? T(rue) : F(alse)  - Ternary Conditional Operator*/}
     {/* {showSlogan ? <h2>Anyone can code!</h2> : <h2>Vi har inget motto..</h2>} */}
     {showSlogan && <h2>Anyone can code!</h2>}
     </>
